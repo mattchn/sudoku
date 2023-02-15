@@ -97,6 +97,3 @@ def is_valid(board, num, pos):
    return True
    
 print_board(board)
-print('')
-solve(board)
-print_board(board)

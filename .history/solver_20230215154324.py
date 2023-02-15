@@ -99,4 +99,5 @@ def is_valid(board, num, pos):
 print_board(board)
 print('')
 solve(board)
+print('')
 print_board(board)

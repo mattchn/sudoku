@@ -22,16 +22,6 @@ def solve(board):
    else:
       row, col = find
    
-   #loop through 1-9 and plug it in the board
-   for i in range(1, 10):
-      if is_valid(board, i, (row, col)):
-         board[row][col] = i
-         
-         if solve(board):
-            return True
-   
-         board[row][col] = 0
-   return False
 
 def print_board(board):
    '''
@@ -64,7 +54,6 @@ def find_empty(board):
          if board[i][j] == 0:
             return (i, j) # row, col
    
-   #if no empty spots then
    return None
 
 def is_valid(board, num, pos):
@@ -96,7 +85,4 @@ def is_valid(board, num, pos):
    #nothing wrong then
    return True
    
-print_board(board)
-print('')
-solve(board)
 print_board(board)

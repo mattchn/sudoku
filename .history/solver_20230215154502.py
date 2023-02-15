@@ -16,6 +16,7 @@ def solve(board):
    input -> list[list[int]]
    return -> list[list[int]]
    '''
+   print_board(board)
    find = find_empty(board)
    if not find:
       return True

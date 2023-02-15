@@ -97,6 +97,8 @@ def is_valid(board, num, pos):
    return True
    
 print_board(board)
-print('')
+print(/n)
 solve(board)
+print(/n)
+
 print_board(board)
