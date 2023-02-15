@@ -12,9 +12,7 @@ board = [
 
 def print_board(board):
    '''
-   prints out the board
-   input -> list[list[int]]
-   return -> none
+   
    '''
    for i in range(len(board)):
       if i % 3 == 0 and i != 0:
@@ -31,11 +29,6 @@ def print_board(board):
             print(str(board[i][j]) + ' ', end='')
             
 def find_empty(board):
-   '''
-   finds the empty spots in the board denoted by int value 0
-   input -> list[list[int]]
-   return -> tuple
-   '''
    for i in range(len(board)):
       for j in range(len(board[0])):
          if board[i][j] == 0:
