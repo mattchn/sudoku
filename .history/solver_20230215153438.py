@@ -48,7 +48,7 @@ def find_empty(board):
          if board[i][j] == 0:
             return (i, j) # row, col
 
-def is_valid(board, num, pos):
+def valid(board, num, pos):
    '''
    check if the number inputed in the board is a valid input
    input -> list[list[int]], int, tuple
@@ -71,10 +71,6 @@ def is_valid(board, num, pos):
    
    for i in range(box_y * 3, box_y * 3 + 3):
       for j in range(box_x * 3, box_x * 3 + 3):
-         if board[i][j] == num and (i, j) != pos:
-            return False
    
-   #nothing wrong then
-   return True
    
 print_board(board)

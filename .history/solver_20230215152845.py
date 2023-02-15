@@ -48,33 +48,12 @@ def find_empty(board):
          if board[i][j] == 0:
             return (i, j) # row, col
 
-def is_valid(board, num, pos):
+def valid(board, num, pos):
    '''
    check if the number inputed in the board is a valid input
    input -> list[list[int]], int, tuple
    return -> boolean
    '''
-   #check row
-   for i in range(len(board[0])):
-      if board[pos[0]][i] == num and pos[1] != i:
-         return False
    
-   #check column
-   for i in range(len(board)):
-      if board[i][pos[1]] == num and pos[0] != i:
-         return False
 
-   #check 3x3 box
-   #determine which box we're in
-   box_x = pos[1] // 3
-   box_y = pos[0] // 3
-   
-   for i in range(box_y * 3, box_y * 3 + 3):
-      for j in range(box_x * 3, box_x * 3 + 3):
-         if board[i][j] == num and (i, j) != pos:
-            return False
-   
-   #nothing wrong then
-   return True
-   
 print_board(board)
